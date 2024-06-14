@@ -1,5 +1,6 @@
 import profile from "../../assets/Images/user.png";
 import logout from "../../assets/Images/logout.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -7,11 +8,13 @@ function Header() {
       <div className=" flex justify-between p-1 border-b-2">
         <h1 className="font-bold mx-4">Panel0</h1>
         <div className="flex gap-2 mx-4">
-          <img
-            className="w-6 h-6 bg-slate-300 rounded-full p-1 cursor-pointer"
-            src={profile}
-            alt="profile img"
-          />
+          <Link to={''}>
+            <img
+              className="w-6 h-6 bg-slate-300 rounded-full p-1 cursor-pointer"
+              src={profile}
+              alt="profile img"
+            />
+          </Link>
           <img
             className="w-6 h-6 bg-slate-300 rounded-full p-1 cursor-pointer "
             src={logout}
@@ -19,7 +22,6 @@ function Header() {
           />
         </div>
       </div>
-     
     </div>
   );
 }

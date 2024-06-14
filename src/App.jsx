@@ -1,13 +1,14 @@
 import { Route, Routes } from 'react-router-dom'
-import CommonRouter from './Router/CommonRouter'
 import UserRouter from './Router/UserRouter'
+import CommonRouter from './Router/CommonRouter'
 
 function App() {
   return (
     <>
     <Routes>
-      <Route path='/auth/*' element={<CommonRouter/>} ></Route>
       <Route path='/*' element={<UserRouter/>} ></Route>
+      <Route path='/auth/*' element={<CommonRouter/>} ></Route>
+
     </Routes>
     </>
   )
