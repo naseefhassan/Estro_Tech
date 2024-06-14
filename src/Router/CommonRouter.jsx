@@ -1,7 +1,11 @@
+import { Route, Routes } from 'react-router-dom'
+import Login from '../Components/Account/Login'
 
 function CommonRouter() {
   return (
-    <div>CommonRouter</div>
+    <Routes>
+        <Route path='/login' element={<Login/>}></Route>
+    </Routes>
   )
 }
 
