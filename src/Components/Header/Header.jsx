@@ -8,18 +8,20 @@ function Header() {
       <div className=" flex justify-between p-1 border-b-2">
         <h1 className="font-bold mx-4">Panel0</h1>
         <div className="flex gap-2 mx-4">
-          <Link to={''}>
+          <Link to={"/userDetails"}>
             <img
               className="w-6 h-6 bg-slate-300 rounded-full p-1 cursor-pointer"
               src={profile}
               alt="profile img"
             />
           </Link>
-          <img
-            className="w-6 h-6 bg-slate-300 rounded-full p-1 cursor-pointer "
-            src={logout}
-            alt="Logout img"
-          />
+          <Link to={'https://www.estrotech.in/'}>
+            <img
+              className="w-6 h-6 bg-slate-300 rounded-full p-1 cursor-pointer "
+              src={logout}
+              alt="Logout img"
+            />
+          </Link>
         </div>
       </div>
     </div>
