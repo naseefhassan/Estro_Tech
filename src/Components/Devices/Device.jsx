@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { Mycontext } from "../../Context/UserContext";
-import DeviceData from "../../Api/deviceData";
+import deviceData from "../../Api/deviceData.json";
 import usb from "../../assets/Images/usb.png";
 import signal from "../../assets/Images/signal.png";
 import battery from "../../assets/Images/battery.png";
@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 
 function Device() {
   const { setHead } = useContext(Mycontext);
-  const deviceData = DeviceData;
 
   useEffect(() => {
     setHead("Device");
@@ -21,7 +20,7 @@ function Device() {
       <div className="flex gap-2 text-sm font-semibold text-gray-700 flex-wrap">
         {deviceData.map((item) => (
           <Link key={item.deviceName} to={`/devicedata/${item.deviceName}`}>
-            <div className="border-2 w-[350px] p-2 cursor-pointer rounded-lg bg-red-200 ">
+            <div className="border-2 w-[350px] p-2 cursor-pointer rounded-lg">
               <div className="flex justify-between items-center ">
                 <h1>{item.deviceName}</h1>
                 <div className="flex gap-1">
